@@ -44,4 +44,26 @@ class Article extends Model
 
         return null;
     }
+
+    /**
+     * @param $name
+     * @param $value
+     */
+    public function __set($name, $value)
+    {
+        if ('author' === $name && $value instanceof Author) {
+            $this->author_id = $value->id;
+        }
+    }
+
+    /**
+     * @param $name
+     * @return bool
+     */
+    public function __isset($name): bool
+    {
+        if ('author' === $name) {
+            return isset($this->author_id);
+        }
+    }
 }

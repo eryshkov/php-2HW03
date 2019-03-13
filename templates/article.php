@@ -23,12 +23,21 @@
         ?>
         <div class="row">
             <div class="col">
-                <h6><?php echo $article->title; ?></h6>
+                <h3><?php echo $article->title; ?></h3>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <p><?php echo $article->content; ?></p>
+                <blockquote class="blockquote">
+                    <p class="mb-0"><?php echo $article->content; ?></p>
+                    <?php
+                    if (isset($article->author)) {
+                        ?>
+                        <footer class="blockquote-footer"><?php echo $article->author->name; ?></footer>
+                        <?php
+                    }
+                    ?>
+                </blockquote>
             </div>
         </div>
         <?php
