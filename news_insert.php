@@ -13,4 +13,5 @@ if (isset($_POST['title'], $_POST['content'])) {
     exit();
 }
 
-include __DIR__ . '/templates/news_insert.php';
+$view = new \App\View();
+$view->display(__DIR__ . '/templates/news_insert.php');
