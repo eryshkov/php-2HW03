@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var \App\View $this
+ */
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -19,6 +24,7 @@
         </div>
     </div>
     <?php
+    $article = $this->article;
     if (isset($article)) {
         ?>
         <div class="row">

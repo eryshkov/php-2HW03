@@ -2,9 +2,11 @@
 
 require __DIR__ . '/autoload.php';
 
+$view = new \App\View();
+
 if (isset($_GET['id'])) {
-    $article = \App\Models\Article::findById($_GET['id']);
-    if (false === $article) {
+    $view->article = \App\Models\Article::findById($_GET['id']);
+    if (false === $view->article) {
         header('Location:' . '/news_admin.php?info=find_err');
         exit();
     }
@@ -25,4 +27,4 @@ if (isset($_POST['title'], $_POST['content'], $_POST['id'])) {
     exit();
 }
 
-include __DIR__ . '/templates/news_edit.php';
+$view->display(__DIR__ . '/templates/news_edit.php');
