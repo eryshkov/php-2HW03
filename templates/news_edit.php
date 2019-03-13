@@ -29,6 +29,13 @@
                         <input class="form-control" type="text" name="title" value="<?php echo $article->title; ?>">
                     </div>
                     <div class="form-group">
+                        <input class="form-control" type="text" name="author" value="<?php
+                        if (isset($article->author)) {
+                            echo $article->author->name;
+                        }
+                        ?>" disabled>
+                    </div>
+                    <div class="form-group">
                         <textarea class="form-control" name="content" cols="30"
                                   rows="10"><?php echo $article->content; ?></textarea>
                     </div>
