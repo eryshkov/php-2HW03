@@ -99,21 +99,23 @@ abstract class Model
         return $db->execute($sql, $data);
     }
 
-    public function save(): void
+    public function save(): bool
     {
         if (isset($this->id)) {
-            $this->update();
-        } else {
-            $this->insert();
+            return $this->update();
         }
+
+        return $this->insert();
     }
 
-    public function delete(): void
+    public function delete(): bool
     {
         if (isset($this->id)) {
             $db = new Db();
             $sql = 'DELETE FROM ' . static::$table . ' WHERE id=:id';
-            $db->execute($sql, [':id' => $this->id]);
+            return $db->execute($sql, [':id' => $this->id]);
         }
+
+        return false;
     }
 }
