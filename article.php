@@ -2,6 +2,7 @@
 
 require __DIR__ . '/autoload.php';
 
-$article = \App\Models\Article::findById((int)$_GET['id']);
+$view = new \App\View();
+$view->article = \App\Models\Article::findById((int)$_GET['id']);
 
-include __DIR__ . '/templates/article.php';
+$view->display(__DIR__ . '/templates/article.php');
