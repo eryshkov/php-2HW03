@@ -21,4 +21,10 @@ assert($limit === count($articles));
 $article = Article::findById(1);
 assert($article->update());
 
-$article = Article::findById(1);
+$article = Article::findById(3);
+$author = $article->author;
+assert($author instanceof \App\Models\Author);
+
+$article = Article::findById(80);
+assert(false === $article);
+
