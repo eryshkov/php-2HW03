@@ -32,6 +32,15 @@ class View implements \Countable
         include $template;
     }
 
+    public function render(string $template): string
+    {
+        ob_start();
+        include $template;
+        $contents = ob_get_contents();
+        ob_end_clean();
+        return $contents;
+    }
+
     public function count(): int
     {
         return count($this->data);
