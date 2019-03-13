@@ -1,0 +1,39 @@
+<?php
+
+namespace App;
+
+use App\Models\Article;
+
+/**
+ * Class View
+ * @property Article $articles
+ */
+class View implements \Countable
+{
+    protected $data = [];
+
+    public function __set($name, $value): void
+    {
+        $this->data[$name] = $value;
+    }
+
+    public function __get($name)
+    {
+        return $this->data[$name] ?? null;
+    }
+
+    public function __isset($name): bool
+    {
+        return isset($this->data[$name]);
+    }
+
+    public function display(string $template): void
+    {
+        include $template;
+    }
+
+    public function count(): int
+    {
+        return count($this->data);
+    }
+}

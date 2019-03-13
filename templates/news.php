@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var \App\View $this
+ */
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -19,7 +24,7 @@
         </div>
     </div>
     <?php
-    foreach ($articles as $article) {
+    foreach ($this->articles as $article) {
         ?>
         <div class="row">
             <div class="col">
