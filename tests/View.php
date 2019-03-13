@@ -16,3 +16,5 @@ foreach ($view as $key => $property) {
         assert(is_array($property));
     }
 }
+
+assert(2 === count($view));
