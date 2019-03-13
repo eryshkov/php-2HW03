@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var \App\View $this
+ */
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -19,6 +24,7 @@
         </div>
     </div>
     <?php
+    $info = $this->info;
     if (isset($info)) {
         ?>
         <div class="row">
@@ -36,7 +42,7 @@
         </div>
     </div>
     <?php
-    foreach ($articles as $article) {
+    foreach ($this->articles as $article) {
         ?>
         <div class="row mb-1">
             <div class="col-auto">

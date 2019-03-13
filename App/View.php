@@ -8,6 +8,7 @@ use App\Models\Article;
  * Class View
  * @property Article[] $articles
  * @property Article $article
+ * @property string $info
  */
 class View implements \Countable, \Iterator
 {

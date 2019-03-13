@@ -11,7 +11,7 @@
 </p>
 
 ## Информация для проверяющего
-* отсутствует
+* дамп БД в папке `db_dump`
 
 ## Main functionality
 * MVC pattern
