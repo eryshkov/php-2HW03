@@ -6,10 +6,19 @@ use App\Db;
 
 abstract class Model
 {
+    /**
+     * @var string
+     */
     protected static $table = '';
 
+    /**
+     * @var int
+     */
     public $id;
 
+    /**
+     * @return array
+     */
     public static function findAll(): array
     {
         $db = new Db();
@@ -36,6 +45,10 @@ abstract class Model
         return false;
     }
 
+    /**
+     * @param int|null $limit
+     * @return array
+     */
     public static function getAllLast(int $limit = null): array
     {
         $db = new Db();
@@ -49,6 +62,9 @@ abstract class Model
         return $db->query($sql, [], static::class);
     }
 
+    /**
+     * @return bool
+     */
     public function insert(): bool
     {
         $db = new Db();
@@ -75,6 +91,9 @@ abstract class Model
         return $result;
     }
 
+    /**
+     * @return bool
+     */
     public function update(): bool
     {
         if (!isset($this->id)) {
@@ -99,6 +118,9 @@ abstract class Model
         return $db->execute($sql, $data);
     }
 
+    /**
+     * @return bool
+     */
     public function save(): bool
     {
         if (isset($this->id)) {
@@ -108,6 +130,9 @@ abstract class Model
         return $this->insert();
     }
 
+    /**
+     * @return bool
+     */
     public function delete(): bool
     {
         if (isset($this->id)) {
