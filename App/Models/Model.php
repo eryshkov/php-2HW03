@@ -38,7 +38,7 @@ abstract class Model
 
         $result = $db->query($sql, [':id' => $id], static::class);
 
-        if ((bool)$result) {
+        if (empty($result)) {
             return reset($result);
         }
 
