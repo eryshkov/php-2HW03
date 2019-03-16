@@ -8,7 +8,7 @@ if (isset($_POST['title'], $_POST['content'])) {
     $article->content = $_POST['content'];
     $article->insert();
 
-    header('Location:' . '/admin/news_admin.php');
+    header('Location:' . '/admin/');
     exit();
 }
 

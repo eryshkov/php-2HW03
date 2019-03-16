@@ -20,7 +20,7 @@
         <div class="col">
             <a href="/" class="btn btn-outline-success">Новости</a>
             <a href="/tests/" class="btn btn-outline-success">Тесты</a>
-            <a href="/admin/news_admin.php" class="btn btn-outline-success">Админ-Новости</a>
+            <a href="/admin/" class="btn btn-outline-success">Админ-Новости</a>
         </div>
     </div>
     <?php

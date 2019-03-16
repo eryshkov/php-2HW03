@@ -15,7 +15,7 @@
         <div class="col">
             <a href="/" class="btn btn-outline-success">Новости</a>
             <a href="/tests/" class="btn btn-outline-success">Тесты</a>
-            <a href="/admin/news_admin.php" class="btn btn-outline-success">Админ-Новости</a>
+            <a href="/admin/" class="btn btn-outline-success">Админ-Новости</a>
         </div>
     </div>
     <div class="row">
@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-row">
                     <div class="col-auto">
-                        <a href="/admin/news_admin.php" class="btn-outline-secondary btn form-control">Отмена</a>
+                        <a href="/admin/" class="btn-outline-secondary btn form-control">Отмена</a>
                     </div>
                     <div class="col-auto">
                         <button class="btn btn-primary form-control" type="submit">Сохранить</button>

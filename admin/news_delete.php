@@ -5,9 +5,9 @@ if (isset($_GET['id'])) {
     $article = \App\Models\Article::findById($_GET['id']);
     if (false !== $article) {
         $article->delete();
-        header('Location:' . '/admin/news_admin.php');
+        header('Location:' . '/admin/');
         exit();
     }
 }
 
-header('Location:' . '/admin/news_admin.php');
+header('Location:' . '/admin/');
