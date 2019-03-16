@@ -29,7 +29,7 @@
         ?>
         <div class="row">
             <div class="col">
-                <form action="/news_edit.php" method="post" enctype="multipart/form-data">
+                <form action="/news_update.php" method="post" enctype="multipart/form-data">
                     <input type="hidden" name="id" value="<?php echo $article->id; ?>">
                     <div class="form-group">
                         <input class="form-control" type="text" name="title" value="<?php echo $article->title; ?>">

@@ -1,5 +1,4 @@
 <?php
-
 require __DIR__ . '/autoload.php';
 
 if (isset($_GET['id'])) {
@@ -11,4 +10,4 @@ if (isset($_GET['id'])) {
     }
 }
 
-header('Location:' . '/news_admin.php?info=find_err');
+header('Location:' . '/news_admin.php');

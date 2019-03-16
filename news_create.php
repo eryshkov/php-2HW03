@@ -1,5 +1,4 @@
 <?php
-
 require __DIR__ . '/autoload.php';
 
 if (isset($_POST['title'], $_POST['content'])) {
@@ -14,4 +13,4 @@ if (isset($_POST['title'], $_POST['content'])) {
 }
 
 $view = new \App\View();
-$view->display(__DIR__ . '/templates/news_insert.php');
+$view->display(__DIR__ . '/templates/news_create.php');

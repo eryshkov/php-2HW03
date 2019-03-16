@@ -38,7 +38,7 @@
     } ?>
     <div class="row">
         <div class="col">
-            <a class="btn btn-outline-primary mb-1" href="/news_insert.php">Добавить новость</a>
+            <a class="btn btn-outline-primary mb-1" href="/news_insert_form.php">Добавить новость</a>
         </div>
     </div>
     <?php

@@ -20,7 +20,7 @@
     </div>
     <div class="row">
         <div class="col">
-            <form action="/news_insert.php" method="post" enctype="multipart/form-data">
+            <form action="/news_create.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <input class="form-control" type="text" name="title" placeholder="Заголовок новости">
                 </div>
