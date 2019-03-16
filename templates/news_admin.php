@@ -20,7 +20,7 @@
         <div class="col">
             <a href="/" class="btn btn-outline-success">Новости</a>
             <a href="/tests/" class="btn btn-outline-success">Тесты</a>
-            <a href="/news_admin.php" class="btn btn-outline-success">Админ-Новости</a>
+            <a href="/admin/news_admin.php" class="btn btn-outline-success">Админ-Новости</a>
         </div>
     </div>
     <?php
@@ -38,7 +38,7 @@
     } ?>
     <div class="row">
         <div class="col">
-            <a class="btn btn-outline-primary mb-1" href="/news_insert_form.php">Добавить новость</a>
+            <a class="btn btn-outline-primary mb-1" href="/admin/news_insert_form.php">Добавить новость</a>
         </div>
     </div>
     <?php
@@ -46,10 +46,10 @@
         ?>
         <div class="row mb-1">
             <div class="col-auto">
-                <a class="btn btn-outline-info" href="/news_edit.php?id=<?php echo $article->id; ?>">✎</a>
+                <a class="btn btn-outline-info" href="/admin/news_edit.php?id=<?php echo $article->id; ?>">✎</a>
             </div>
             <div class="col-auto">
-                <a class="btn btn-outline-danger" href="/news_delete.php?id=<?php echo $article->id; ?>">X</a>
+                <a class="btn btn-outline-danger" href="/admin/news_delete.php?id=<?php echo $article->id; ?>">X</a>
             </div>
             <div class="col">
                 <a href="/article.php?id=<?php echo $article->id; ?>"><?php echo $article->title; ?></a>

@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/autoload.php';
+require __DIR__ . '/../autoload.php';
 
 if (isset($_POST['title'], $_POST['content'])) {
     $article = new \App\Models\Article();
@@ -8,9 +8,9 @@ if (isset($_POST['title'], $_POST['content'])) {
     $article->content = $_POST['content'];
     $article->insert();
 
-    header('Location:' . '/news_admin.php');
+    header('Location:' . '/admin/news_admin.php');
     exit();
 }
 
 $view = new \App\View();
-$view->display(__DIR__ . '/templates/news_create.php');
+$view->display(__DIR__ . '/../templates/news_create.php');
