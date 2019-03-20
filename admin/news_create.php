@@ -11,6 +11,3 @@ if (isset($_POST['title'], $_POST['content'])) {
     header('Location:' . '/admin/');
     exit();
 }
-
-$view = new \App\View();
-$view->display(__DIR__ . '/../templates/news_create.php');
