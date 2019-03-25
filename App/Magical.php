@@ -4,6 +4,8 @@ namespace App;
 
 trait Magical
 {
+    protected $data = [];
+
     public function __set($name, $value): void
     {
         $this->data[$name] = $value;

@@ -12,9 +12,9 @@ use App\Models\Article;
  */
 class View implements \Countable, \Iterator
 {
-    protected $data = [];
-
     use Magical;
+
+    protected $data = [];
 
     public function display(string $template): void
     {
