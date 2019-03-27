@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\Db;
-
 /**
  * Class Article
  * @property Author author
@@ -65,5 +63,7 @@ class Article extends Model
         if ('author' === $name) {
             return isset($this->author_id);
         }
+
+        return false;
     }
 }
