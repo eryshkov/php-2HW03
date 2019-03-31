@@ -135,12 +135,12 @@ abstract class Model
      */
     public function delete(): bool
     {
-        if (isset($this->id)) {
-            $db = new Db();
-            $sql = 'DELETE FROM ' . static::$table . ' WHERE id=:id';
-            return $db->execute($sql, [':id' => $this->id]);
+        if (!isset($this->id)) {
+            return false;
         }
 
-        return false;
+        $db = new Db();
+        $sql = 'DELETE FROM ' . static::$table . ' WHERE id=:id';
+        return $db->execute($sql, [':id' => $this->id]);
     }
 }
