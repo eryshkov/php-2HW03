@@ -12,7 +12,7 @@ class Article extends Model
      * @var string
      */
     protected static $table = 'news';
-
+    
     /**
      * @var string
      */
@@ -25,7 +25,7 @@ class Article extends Model
      * @var int
      */
     public $author_id;
-
+    
     /**
      * @param $name
      * @return Author|null
@@ -34,15 +34,15 @@ class Article extends Model
     {
         if ('author' === $name && isset($this->author_id)) {
             $result = Author::findById($this->author_id);
-
+            
             if (false !== $result) {
                 return $result;
             }
         }
-
+        
         return null;
     }
-
+    
     /**
      * @param $name
      * @param $value
@@ -53,7 +53,7 @@ class Article extends Model
             $this->author_id = $value->id;
         }
     }
-
+    
     /**
      * @param $name
      * @return bool
@@ -63,7 +63,7 @@ class Article extends Model
         if ('author' === $name) {
             return isset($this->author_id);
         }
-
+        
         return false;
     }
 }

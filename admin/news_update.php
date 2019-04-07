@@ -7,11 +7,11 @@ if (isset($_POST['title'], $_POST['content'], $_POST['id'])) {
         header('Location:' . '/admin/');
         exit();
     }
-
+    
     $article->title = $_POST['title'];
     $article->content = $_POST['content'];
     $article->update();
-
+    
     header('Location:' . '/admin/');
     exit();
 }
